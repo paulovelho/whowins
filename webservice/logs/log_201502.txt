@@ -1,0 +1,4 @@
+[2015-02-04 08:50:39] = <---< Mail inserted: [id: 80, to: penacova@paulovelho.com] <---<
+
+[2015-02-04 09:00:05] = >===> Sending mail: [id: 80, to: penacova@paulovelho.com] >===>
+
