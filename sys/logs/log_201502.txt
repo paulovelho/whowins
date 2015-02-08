@@ -1,0 +1,58 @@
+[2015-02-07 10:17:10] =  ERROR!!! query error: [  ]
+
+[2015-02-07 10:17:53] =  ERROR!!! query error: [  ]
+
+[2015-02-07 10:18:13] =  ERROR!!! query error: [  ]
+
+[2015-02-07 10:19:10] =  ERROR!!! query error: [  ]
+
+[2015-02-07 10:34:14] =  ERROR!!! query error: [  ]
+
+[2015-02-07 10:38:03] =  ERROR!!! query error: [  ]
+
+[2015-02-07 10:40:31] =  ERROR!!! query error: [  ]
+
+[2015-02-07 10:49:47] =  ERROR!!! query error: [  ]
+
+[2015-02-07 10:50:24] =  ERROR!!! query error: [  ]
+
+[2015-02-07 10:51:12] =  ERROR!!! query error: [  ]
+
+[2015-02-07 10:52:19] =  ERROR!!! query error: [ SELECT * from battle ]
+
+[2015-02-07 10:52:45] =  ERROR!!! query error: [ SELECT * from battle ]
+
+[2015-02-07 10:53:20] =  ERROR!!! query error: [ SELECT * from battle ]
+
+[2015-02-07 10:54:36] =  ERROR!!! query error: [ SELECT * from battle ]
+
+[2015-02-07 10:54:38] =  ERROR!!! query error: [ SELECT * from battle ]
+
+[2015-02-07 10:54:39] =  ERROR!!! query error: [ SELECT * from battle ]
+
+[2015-02-07 10:54:39] =  ERROR!!! query error: [ SELECT * from battle ]
+
+[2015-02-07 10:54:39] =  ERROR!!! query error: [ SELECT * from battle ]
+
+[2015-02-07 10:54:39] =  ERROR!!! query error: [ SELECT * from battle ]
+
+[2015-02-07 10:55:05] =  ERROR!!! query error: [ SELECT * from battle ]
+
+[2015-02-07 10:56:04] =  ERROR!!! query error: [ SELECT * from battle ]
+
+[2015-02-07 10:56:19] =  ERROR!!! query error: [ SELECT * from battle ]
+
+[2015-02-07 10:57:13] =  ERROR!!! query error: [ SELECT * from battle ]
+
+[2015-02-08 10:51:12] =  ERROR!!! query error: [ SELECT people.id AS 'people/id', people.name AS 'people/name', people.category_id AS 'people/category_id', people.sub_category AS 'people/sub_category', people.peso AS 'people/peso', categories.id AS 'categories/id', categories.name AS 'categories/name' FROM people  INNER JOIN categories ON categories.category_id = people.id  ORDER BY id ASC LIMIT 0, 50 ]
+
+[2015-02-08 10:53:15] =  ERROR!!! query error: [ SELECT people.id AS 'people/id', people.name AS 'people/name', people.category_id AS 'people/category_id', people.sub_category AS 'people/sub_category', people.peso AS 'people/peso', categories.id AS 'categories/id', categories.name AS 'categories/name' FROM people  INNER JOIN categories ON people.category_id = categories.id  ORDER BY id ASC LIMIT 0, 50 ]
+
+[2015-02-08 10:54:11] =  ERROR!!! query error: [ SELECT people.id AS 'people/id', people.name AS 'people/name', people.category_id AS 'people/category_id', people.sub_category AS 'people/sub_category', people.peso AS 'people/peso', categories.id AS 'categories/id', categories.name AS 'categories/name' FROM people  INNER JOIN categories ON categories.category_id = people.id  ORDER BY people.id ASC LIMIT 0, 50 ]
+
+[2015-02-08 11:09:10] =  ERROR!!! query error: [ SELECT people.id, people.name, categories.name FROM people ORDER BY id ASC LIMIT 0, 50 ]
+
+[2015-02-08 11:11:33] =  ERROR!!! query error: [ SELECT * FROM people  INNER JOIN categories ON categories.id = people.category_id  ORDER BY id ASC LIMIT 0, 50 ]
+
+[2015-02-08 11:12:16] =  ERROR!!! query error: [ SELECT * FROM people, categories  INNER JOIN categories ON categories.id = people.category_id  LIMIT 0, 50 ]
+
