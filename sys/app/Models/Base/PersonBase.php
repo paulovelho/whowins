@@ -5,7 +5,7 @@
 
 class PersonBase extends MagratheaModel implements iMagratheaModel {
 
-	public $id, $name, $category_id, $sub_category, $peso;
+	public $id, $name, $category_id, $tags, $peso;
 	public $created_at, $updated_at;
 	protected $lazyLoad = true;
 
@@ -23,7 +23,7 @@ class PersonBase extends MagratheaModel implements iMagratheaModel {
 		$this->dbValues["id"] = "int";
 		$this->dbValues["name"] = "string";
 		$this->dbValues["category_id"] = "int";
-		$this->dbValues["sub_category"] = "string";
+		$this->dbValues["tags"] = "string";
 		$this->dbValues["peso"] = "int";
 
 		$this->relations["properties"]["Category"] = null;

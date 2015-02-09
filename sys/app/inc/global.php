@@ -6,6 +6,8 @@
 
 	$magrathea_path = "/Users/paulovelho/Sites/Magrathea/Magrathea";
 	$site_path = "/Users/paulovelho/Sites/whowins/sys";
+//	$magrathea_path = "/home/platypusweb/Magrathea";
+//	$site_path = "/home/platypusweb/whowins/sys";
 
 	include($magrathea_path."/LOAD.php");
 

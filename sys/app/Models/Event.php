@@ -7,6 +7,12 @@ class Event extends EventBase {
 }
 
 class EventControl extends EventControlBase {
+
+	public static function Truncate(){
+		$sql = "TRUNCATE TABLE events";
+		self::RunQuery($sql);
+	}
+
 	public static function GetMax(){
 		$query = MagratheaQuery::Select()
 			->Fields("MAX(id)")

@@ -7,6 +7,12 @@ class Battle extends BattleBase {
 }
 
 class BattleControl extends BattleControlBase {
+
+	public static function Truncate(){
+		$sql = "TRUNCATE TABLE battles";
+		self::RunQuery($sql);
+	}
+
 	public static function GetMax(){
 		$query = MagratheaQuery::Select()
 			->Fields("MAX(id)")

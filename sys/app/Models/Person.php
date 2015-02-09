@@ -7,6 +7,12 @@ class Person extends PersonBase {
 }
 
 class PersonControl extends PersonControlBase {
+
+	public static function Truncate(){
+		$sql = "TRUNCATE TABLE people";
+		self::RunQuery($sql);
+	}
+
 	public static function GetMax(){
 		$query = MagratheaQuery::Select()
 			->Fields("MAX(id)")
@@ -39,8 +45,9 @@ class PersonControl extends PersonControlBase {
 		return $rand;
 	}
 
-	public static function GiveMeSomeone($id){
+	public static function GiveMeSomeone($id=0){
 		try{
+			if(empty($id)) $id = self::GiveMeRandom();
 			$p = new Person($id);
 			if(empty($p->id)){
 				return self::GiveMeSomeone(self::GiveMeRandom());
