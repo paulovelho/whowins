@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.platypus.quemganha" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Quem ganha?</name>
+    <description>
+        Onze girafas agressivas x Michael J Fox com um lança chamas
+        Jack Bauer x Ducktales
+        amor x bom senso
+
+        Discuta com os amigos quem ganha nas batalhas
+    </description>
+    <author email="paulovelho@paulovelho.com" href="http://quemganha.platypusweb.com.br/">
+        Platypus Technology
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <preference name="fullscreen" value="true" />
+    <preference name="webviewbounce" value="false" />
+    <preference name="UIWebViewBounce" value="false" />
+    <preference name="DisallowOverscroll" value="true" />
+</widget>
