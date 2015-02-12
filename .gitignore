@@ -1,3 +1,4 @@
 .DS_Store
 *.sublime-*
 app/Views/_compiled/*
+magrathea.conf
