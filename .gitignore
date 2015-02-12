@@ -1,3 +1,5 @@
 .DS_Store
 *.sublime-*
 app/Views/_compiled/*
+sftp-config.json
+
