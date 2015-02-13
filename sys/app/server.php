@@ -40,6 +40,10 @@ class WhoWinsServer extends MagratheaServer{
 		$this->Json(PersonControl::GiveMeSomeone());
 	}
 
+	public function GetAllEvents(){
+		$this->Json(EventControl::GetAll());
+	}
+
 }
 
 $server = new WhoWinsServer();

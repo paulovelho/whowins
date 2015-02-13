@@ -1,3 +1,5 @@
+"use strict";
+
 whowins
 .factory("battlebucket", function(){
 
@@ -37,10 +39,38 @@ whowins
 	};
 	var db_insertEvents = function(tx){
 		var questions = data;
+		var values = [];
 		questions.forEach(function(q){
-			tx.executeSql("INSERT INTO events (id, question) VALUES ("+q.id+", '"+q.question+"')");
-			// we can make this better! ;)
+			values.push("("+q.id+", '"+q.question+"')");
 		});
+		tx.executeSql("INSERT INTO events (id, question) VALUES " + valuse.join());
+	}
+
+	// players:
+	var db_createEventTable = function(tx){
+		tx.executeSql("CREATE TABLE IF NOT EXISTS players (id, title, category)");
+	};
+	var db_truncateEvents = function(tx){
+		tx.executeSql("DROP TABLE players");
+	};
+	var db_insertEvents = function(tx){
+		var players = data;
+		var values = [];
+		players.forEach(function(p){
+			values.push("("+p.id+", '"+q.title+"', "+p.category+")");
+		});
+		tx.executeSql("INSERT INTO players (id, title, category) VALUES " + valuse.join());
+	}
+
+
+
+	// selects:
+	var db_getRandomEvent = function(callback){
+		select("SELECT * FROM events ORDER BY RAND() LIMIT 1", callback);
+	}
+
+	var db_getTwoRandomPlayers = function(callback){
+		select("SELECT * FROM events ORDER BY RAND() LIMIT 2", callback);
 	}
 
 

@@ -21,6 +21,7 @@
     <script src="js/app.js"></script>
     <script src="js/controllers/cards.js"></script>
     <script src="js/controllers/single-card.js"></script>
+    <script src="js/controllers/settings-card.js"></script>
     <script src="js/services/database.js"></script>
     <script src="js/swipecards.js"></script>
 
@@ -31,7 +32,7 @@
 
   <ion-pane ng-controller="CardsCtrl" class="pane">
     <swipe-cards>
-      <swipe-card ng-repeat="card in cards" on-destroy="cardDestroyed($index)" on-card-swipe="cardSwiped($index)">
+      <swipe-card ng-repeat="card in battles" on-destroy="cardDestroyed($index)" on-card-swipe="cardSwiped($index)" ng-show="(mode == MODE_BATTLE)">
         <div ng-controller="CardCtrl">
           <div class="question">
             <h3>{{card.question}}</h3>
@@ -40,12 +41,37 @@
             <h4>{{card.player1}}</h4>
             <h4>{{card.player2}}</h4>
           </div>
-
         </div>
       </swipe-card>
-    </swipe-cards>
-  </ion-pane>
 
+      <swipe-card ng-repeat="card in players" on-destroy="cardDestroyed($index)" on-card-swipe="cardSwiped($index)" ng-show="(mode == MODE_PLAYER)">
+        <div ng-controller="CardCtrl">
+          <div class="question">
+            <h2>{{card.name}}</h2>
+          </div>
+        </div>
+      </swipe-card>
+
+      <swipe-card ng-show="(mode == MODE_SETTINGS)" on-destroy="removeSetting()" on-card-swipe="removeSetting()">
+        <div ng-controller="SettingsCtrl">
+          <div class="list">
+            <a class="item item-icon-left">
+              <i class="icon ion-refresh"></i>
+              Checar updates
+            </a>
+          </div>
+        </div>
+      </swipe-card>
+
+    </swipe-cards>
+
+    <div class="bar bar-footer bar-dark">
+      <!--button class="button button-light pull-left icon-left ion-gear-b">Opções</button-->
+      <button class="button button-clear pull-left icon ion-gear-b" ng-click="settings()"></button>
+      <button class="button button-clear pull-right icon ion-clock"></button>
+    </div>
+
+  </ion-pane>
 
 </body>
 
